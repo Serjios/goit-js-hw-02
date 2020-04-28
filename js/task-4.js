@@ -1,10 +1,9 @@
 'use strict';
 
 const formatString = function(string) {
-  const words = string.split('');
-  if (words.length > 40) {
-    words.splice(40);
-    const result = words.join('');
+  if (string.length > 40) {
+    const result = string.slice(0, 40);
+
     return `${result}...`;
   }
 

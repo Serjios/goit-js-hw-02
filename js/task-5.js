@@ -2,7 +2,7 @@
 
 const checkForSpam = function(message) {
   const words = message.toLowerCase();
-  const find = words.indexOf('spam') > -1 || words.indexOf('sale') > -1;
+  const find = words.includes('spam') || words.includes('sale');
 
   return find;
 };
